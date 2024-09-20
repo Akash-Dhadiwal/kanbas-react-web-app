@@ -3,7 +3,7 @@ export default function Dashboard() {
   return (
     <div id="wd-dashboard">
       <h1 id="wd-dashboard-title">Dashboard</h1> <hr />
-      <h2 id="wd-dashboard-published">Published Courses (12)</h2> <hr />
+      <h2 id="wd-dashboard-published">Published Courses (7)</h2> <hr />
       <div id="wd-dashboard-courses">
         <div className="wd-dashboard-course">
           <Link className="wd-dashboard-course-link" to="/Kanbas/Courses/1234/Home">
@@ -29,7 +29,7 @@ export default function Dashboard() {
 
         <div className="wd-dashboard-course">
           <Link className="wd-dashboard-course-link" to="/Kanbas/Courses/5678/Home">
-            <img src="images/mongodb.png" width={200} alt="MongoDB Course"/>
+            <img src="images/mgdb.png" width={200} alt="MongoDB Course"/>
             <div>
               <h5>CS5678</h5>
               <p className="wd-dashboard-course-title">NoSQL Databases with MongoDB</p>
@@ -68,8 +68,19 @@ export default function Dashboard() {
               <button> Go</button>
             </div>
           </Link>
-          </div>
+        </div>
+
+        <div className="wd-dashboard-course">
+          <Link className="wd-dashboard-course-link" to="/Kanbas/Courses/7000/Home">
+            <img src="images/devops.jpg" width={200} alt="Devops"/>
+            <div>
+              <h5>CS7000</h5>
+              <p className="wd-dashboard-course-title">Devops</p>
+              <button> Go</button>
+            </div>
+          </Link>
         </div>
       </div>
+    </div>
   );
 }
