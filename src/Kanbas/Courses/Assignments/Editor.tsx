@@ -23,6 +23,7 @@ export default function AssignmentEditor() {
                         <input id="wd-points" value={100}/>
                     </td>
                 </tr>
+                <br/>
                 <tr>
                     <td align="right" valign="top">
                         <label htmlFor="wd-group">Assignment Group</label>
@@ -33,81 +34,88 @@ export default function AssignmentEditor() {
                         </select>
                     </td>
                 </tr>
+                <br/>
                 <tr>
                     <td align="right" valign="top">
-                        <label htmlFor="wd-display">Display Grade as</label>
+                        <label htmlFor="wd-display-grade-as">Display Grade as</label>
                     </td>
                     <td>
-                        <select id="wd-display">
+                        <select id="wd-display-grade-as">
                             <option value="PERCENTAGE">Percentage</option>
                         </select>
                     </td>
                 </tr>
+                <br/>
                 <tr>
                     <td align="right" valign="top">
-                        <label htmlFor="wd-type">Submission Type</label>
+                        <label htmlFor="wd-submission-type">Submission Type</label>
                     </td>
                     <td>
-                        <select id="wd-type">
+                        <select id="wd-submission-type">
                             <option value="ONLINE">Online</option>
                         </select>
                     </td>
                 </tr>
+                <br/>
                 <tr>
                     <td></td>
                     <td>
-                        <label htmlFor="wd-option">Online Entry Options</label>
+                        <label htmlFor="wd-entry-options">Online Entry Options</label>
                         <br/>
-                        <input type="checkbox" name="check-option" id="wd-chkbox-text"/>
-                        <label htmlFor="wd-chkbox-text">Text Entry</label>
-                        <br/>
-
-                        <input type="checkbox" name="check-option" id="wd-chkbox-website"/>
-                        <label htmlFor="wd-chkbox-website">Website URL</label>
+                        <input type="checkbox" name="check-option" id="wd-text-entry"/>
+                        <label htmlFor="wd-text-entry">Text Entry</label>
                         <br/>
 
-                        <input type="checkbox" name="check-option" id="wd-chkbox-media"/>
-                        <label htmlFor="wd-chkbox-media">Media Recordings</label>
+                        <input type="checkbox" name="check-option" id="wd-website-url"/>
+                        <label htmlFor="wd-website-url">Website URL</label>
                         <br/>
 
-                        <input
-                            type="checkbox"
-                            name="check-option"
-                            id="wd-chkbox-annotation"
-                        />
-                        <label htmlFor="wd-chkbox-annotation">Student Annotation</label>
+                        <input type="checkbox" name="check-option" id="wd-media-recordings"/>
+                        <label htmlFor="wd-media-recordings">Media Recordings</label>
                         <br/>
+
+                        <input type="checkbox" name="check-option" id="wd-student-annotation"/>
+                        <label htmlFor="wd-student-annotation">Student Annotation</label>
+                        <br/>
+
+                        <input type="checkbox" name="check-option" id="wd-file-upload"/>
+                        <label htmlFor="wd-file-upload">File Uploads</label>
+                        <br/>
+
                     </td>
                 </tr>
+                <br/>
                 <tr>
                     <td align="right" valign="top">
-                        <label htmlFor="wd-assign">Assign</label>
+                        <label htmlFor="wd-assign-to">Assign</label>
                     </td>
                     <td align="left" valign="top">
-                        <label htmlFor="wd-assign">Assign to</label>
+                        <label htmlFor="wd-assign-to">Assign to</label>
                         <br/>
-                        <input id="wd-assign" value={"Everyone"}/>
+                        <input id="wd-assign-to" value={"Everyone"}/>
                     </td>
                 </tr>
+                <br/>
                 <tr>
                     <td></td>
                     <td>
-                        <label htmlFor="wd-due">Due</label>
+                        <label htmlFor="wd-due-date">Due</label>
                         <br/>
-                        <input type="date" id="wd-due" value="2024-05-13"/>
+                        <input type="date" id="wd-due-date" value="2024-05-13"/>
                     </td>
                 </tr>
+                <br/>
                 <tr>
                     <td></td>
                     <td>
-                        <label htmlFor="wd-from">Available from</label>
+                        <label htmlFor="wd-available-from">Available from</label>
                         <br/>
-                        <input type="date" id="wd-from" value="2024-05-06"/>
+                        <input type="date" id="wd-available-from" value="2024-05-06"/>
                     </td>
                     <td>
-                        <label htmlFor="wd-until">Until</label>
+                        <label htmlFor="wd-available-until">Until</label>
                         <br/>
-                        <input type="date" id="wd-until" value="2024-05-20"/>
+                        <input type="date" id="wd-available-until" value="2024-05-20"/>
                     </td>
                 </tr>
             </table>
