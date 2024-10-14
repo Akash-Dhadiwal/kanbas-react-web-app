@@ -22,7 +22,7 @@ export default function Assignments() {
                             <div className="position-absolute top-50 start-50 translate-middle w-75">
                                 <a className="wd-assignment-link text-black link-underline link-underline-opacity-0"
                                    href="#/Kanbas/Courses/1234/Assignments/123">
-                                    A1 - ENV + HTML
+                                    <b>A1 - ENV + HTML</b>
                                 </a>
                                 <p><text className="text-danger">Multiple Modules</text> | <b>Not Available until</b> May 6 at 12:00am | <b>Due</b> May 13 at 11:59pm | 100 pts</p>
                             </div>
@@ -34,7 +34,7 @@ export default function Assignments() {
                             <div className="position-absolute top-50 start-50 translate-middle w-75">
                                 <a className="wd-assignment-link text-black link-underline link-underline-opacity-0"
                                    href="#/Kanbas/Courses/1234/Assignments/123">
-                                    A2 - CSS + BOOTSTRAP
+                                    <b>A2 - CSS + BOOTSTRAP</b>
                                 </a>
                                 <p><text className="text-danger">Multiple Modules</text> | <b>Not Available until</b> May 13 at 12:00am | <b>Due</b> May 20 at 11:59pm | 100 pts</p>
                             </div>
@@ -46,7 +46,7 @@ export default function Assignments() {
                             <div className="position-absolute top-50 start-50 translate-middle w-75">
                                 <a className="wd-assignment-link text-black link-underline link-underline-opacity-0"
                                    href="#/Kanbas/Courses/1234/Assignments/123">
-                                    A3 - JAVASCRIPT + REACT
+                                    <b>A3 - JAVASCRIPT + REACT</b>
                                 </a>
                                 <p><text className="text-danger">Multiple Modules</text> | <b>Not Available until</b> May 20 at 12:00am | <b>Due</b> May 27 at 11:59pm | 100 pts</p>
                             </div>
