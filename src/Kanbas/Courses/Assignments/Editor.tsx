@@ -1,15 +1,26 @@
+import {useParams} from "react-router";
+import {assignments} from "../../Database"
+import { useNavigate } from 'react-router-dom';
+
 export default function AssignmentEditor() {
+    const {cid, aid} = useParams();
+    const assignment = assignments.find((assignment : any) => assignment._id === aid)
+    const navigate = useNavigate();
+
+    const handleButtonClick = () => {
+        navigate(`/Kanbas/Courses/${cid}/Assignments`);
+    };
     return (
         <div id="wd-assignments-editor" className="me-4">
             <label htmlFor="wd-name" className="mb-2"><b>Assignment Name</b></label>
-            <input id="wd-name" defaultValue="A1 - ENV + HTML" className="form-control mb-4"/>
+            <input id="wd-name" defaultValue={assignment && assignment.title} className="form-control mb-4"/>
             <textarea id="wd-description" className="form-control mb-4">
-        The assignment is available online. Submit a link to the landing page of your web application running on Netlify.
+        {assignment && assignment.description}
       </textarea>
             <div className="row">
                 <label htmlFor="wd-points" className="col"><span
                     className="float-end me-2">Points</span></label>
-                <input id="wd-points" defaultValue={100} className="form-control mb-3 col"/>
+                <input id="wd-points" defaultValue={assignment && assignment.points} className="form-control mb-3 col"/>
             </div>
             <div className="row">
                 <label htmlFor="wd-group" className="col"><span className="float-end me-2">Assignment Group</span></label>
@@ -72,26 +83,26 @@ export default function AssignmentEditor() {
                     <input id="wd-assign-to" value="Everyone" className="form-control mb-2"/>
 
                     <label htmlFor="wd-due-date"><b>Due</b></label><br/>
-                    <input type="date" id="wd-due-date" defaultValue="2024-09-20"
+                    <input type="datetime-local" id="wd-due-date" defaultValue={assignment && assignment.due}
                            className="form-control mb-2"/>
 
                     <div className="row">
                         <div className="col">
                             <label htmlFor="wd-available-from"><b>Available From</b></label>
-                            <input type="date" id="wd-available-from" defaultValue="2024-09-20"
+                            <input type="datetime-local" id="wd-available-from" defaultValue={assignment && assignment.unlock}
                                    className="form-control mb-2"/>
                         </div>
                         <div className="col">
                             <label htmlFor="wd-available-until"><b>Until</b></label>
-                            <input type="date" id="wd-available-until" defaultValue="2024-09-20"
+                            <input type="datetime-local" id="wd-available-until" defaultValue={assignment && assignment.due}
                                    className="form-control mb-2"/>
                         </div>
                     </div>
                 </div>
             </div>
             <hr/>
-            <button className="btn btn-lg btn-danger me-1 float-end">Save</button>
-            <button className="btn btn-lg btn-secondary me-1 float-end">Cancel</button>
+            <button onClick={handleButtonClick} className="btn btn-lg btn-danger me-1 float-end">Save</button>
+            <button onClick={handleButtonClick} className="btn btn-lg btn-secondary me-1 float-end">Cancel</button>
         </div>
     );
 }
